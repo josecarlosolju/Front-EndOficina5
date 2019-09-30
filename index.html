@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Teste para oficina5</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+
+<body>
+
+    <div id="demo">
+
+    <div class="wrap">       
+        <div class="page-header">
+            <h1>Galeria de Fotos responsiva com CSS e JS</h1>   
+        </div>
+
+        <section class="container gallery-container">
+
+            <!--Slide-->
+            <div class="mySlides fade">
+                <!-- 01 -->
+                <div class="numbertext">01 / 05</div>
+                <img class="imgslide" src="images/1.jpg" alt="Imagem 1" />
+                <div class="text">Lorem imagem 1...</div>
+            </div>
+
+            <div class="mySlides fade">
+                <!-- 02 -->
+                <div class="numbertext">02 / 05</div>
+                <img class="imgslide" src="images/2.jpg" alt="Imagem 2" />
+                <div class="text">Lorem imagem 2...</div>
+            </div>
+
+            <div class="mySlides fade">
+                <!-- 04 -->
+                <div class="numbertext">03 / 05</div>
+                <img class="imgslide" src="images/3.jpg" alt="Imagem 3" />
+                <div class="text">Lorem imagem 3...</div>
+            </div>
+
+            <div class="mySlides fade">
+                <!-- 04 -->
+                <div class="numbertext">04 / 05</div>
+                <img class="imgslide" src="images/4.jpg" alt="Imagem 4" />
+                <div class="text">Lorem imagem 4...</div>
+            </div>
+
+            <div class="mySlides fade">
+                <!-- 05 -->
+                <div class="numbertext">05 / 05</div>
+                <img class="imgslide" src="images/5.jpg" alt=Imagem 5" />
+                <div class="text">Lorem imagem 5 ...</div>
+            </div>
+            
+
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </section>
+        
+        
+    </div>
+
+
+
+<div  id="tudo1"  align="center">
+	<br>Monitor <strong>R$ 200,00</strong><br>
+	qtd: <input type="number" value="1" min="1" max="10" id="qtd1">
+	<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho
+    ('Monitor', document.getElementById('qtd1').value, '200.00', 1)"> Comprar </button>
+    
+</div>
+
+<div  id="tudo2"   align="center">
+	<br>Mouse <strong>R$ 13,90</strong><br>
+	qtd: <input type="number" value="1" min="1" max="10" id="qtd2">
+	<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho
+	('Mouse', document.getElementById('qtd2').value, '13.90', 2)"> Comprar </button>
+</div>
+
+<div  id="tudo3" align="center">
+    <br>Nobreak <strong>R$ 299,90</strong><br>
+	qtd: <input type="number" value="1" min="1" max="10" id="qtd3">
+	<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho
+    ('Nobreak', document.getElementById('qtd3').value, '299.90', 3)"> Comprar </button>
+    
+</div>
+
+<div  id="tudo4" align="center">
+	<br>LG k11 <strong>R$ 561,90</strong><br>
+	qtd: <input type="number" value="1" min="1" max="10" id="qtd3">
+	<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho
+	('LG k11', document.getElementById('qtd3').value, '561.90', 4)"> Comprar </button>
+</div>
+
+<div  id="tudo5" align="center">
+	<br>Redmi Note 7 <strong>R$ 774,90</strong><br>
+	qtd: <input type="number" value="1" min="1" max="10" id="qtd3">
+	<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho
+	('Redmi Note 7', document.getElementById('qtd3').value, '774.90', 5)"> Comprar </button>
+</div>
+
+<div  id="tudo7" align="center">
+	<br>Smart Tv LG <strong>R$ 500,90</strong><br>
+	qtd: <input type="number" value="1" min="1" max="10" id="qtd3">
+	<button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho
+	('Smart Tv LG', document.getElementById('qtd3').value, '500.90', 6)"> Comprar </button>
+</div>
+
+<div  id="tudo6" align="center">
+	<br><p align="center">
+        <a href="carrinho.html"> Ver Carrinho de compras </a>
+    </p> <br>
+	 
+    
+</div>
+
+</div>
+
+<br>	
+    
+<script>
+	function AddCarrinho(produto, qtd, valor, posicao)
+	{
+		localStorage.setItem("produto" + posicao, produto);
+		localStorage.setItem("qtd" + posicao, qtd);
+		valor = valor * qtd;
+		localStorage.setItem("valor" + posicao, valor);
+		alert("Produto adicionado ao carrinho!");
+	}
+</script>
+
+    <!-- JS Comportament -->
+    <script src="assets/js/comportamento.js"></script>
+</body>
+
+</html>
